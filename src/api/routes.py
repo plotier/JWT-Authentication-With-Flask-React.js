@@ -32,7 +32,7 @@ def sign_up_user():
     user1 = User(name=name, last_name=last_name, email=email, password=password)
     db.session.add(user1)
     db.session.commit()
-    return jsonify({"msg": "El usuario ha sido creado exitosamente :) :O :O !!!"}), 200
+    return jsonify({"msg": "user succesfully created"}), 200
     
 @api.route("/login", methods=["POST"])
 def login():
@@ -47,7 +47,7 @@ def login():
     if not user or not user.check_password(password):
         return jsonify("Your credentials are wrong, please try again"), 401
 
-    access_token = create_access_token(identity=user.serialize)
+    access_token = create_access_token(identity=user.serialize())
     return jsonify(access_token=access_token)
 
 @api.route("/me", methods=["GET", "PUT"])
