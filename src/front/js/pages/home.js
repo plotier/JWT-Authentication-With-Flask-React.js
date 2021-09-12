@@ -3,6 +3,8 @@ import { Context } from "../store/appContext";
 import rigoImageUrl from "../../img/rigo-baby.jpg";
 import "../../styles/home.scss";
 import { Login } from "./login";
+import { Signin } from "./signin";
+import { apiBaseUrl } from "../store/constants";
 
 export const Home = () => {
 	const { store, actions } = useContext(Context);
@@ -15,6 +17,7 @@ export const Home = () => {
 
 			<div>
 				<Login />
+				<Signin />
 			</div>
 			<br />
 			<br />
