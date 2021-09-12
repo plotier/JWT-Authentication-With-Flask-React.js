@@ -4,6 +4,7 @@ import rigoImageUrl from "../../img/rigo-baby.jpg";
 import "../../styles/home.scss";
 import { Login } from "./login";
 import { Signin } from "./signin";
+import { Signup } from "./signup";
 import { apiBaseUrl } from "../store/constants";
 
 export const Home = () => {
@@ -16,9 +17,12 @@ export const Home = () => {
 			<div />
 
 			<div>
-				<Login />
+				<Signup />
+			</div>
+			<div>
 				<Signin />
 			</div>
+
 			<br />
 			<br />
 			<div className="alert alert-info">{store.message || "Loading message from the backend..."}</div>
