@@ -34,8 +34,8 @@ def sign_up_user():
     db.session.commit()
     return jsonify({"msg": "user succesfully created"}), 200
     
-@api.route("/login", methods=["POST"])
-def login():
+@api.route("/sign_in", methods=["POST"])
+def sign_in():
     body_params = request.get_json()
     email = body_params.get("email", None)
     password = body_params.get("password", None)

@@ -26,7 +26,7 @@ export const Signin = () => {
 		fetch(apiBaseUrl + "/api/sign_in", requestOptions)
 			.then(response => response.text())
 			.then(result => {
-				console.log("User was created");
+				console.log("User signed in");
 				//history.push("/");
 			})
 			.catch(error => console.log("error", error));
